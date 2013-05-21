@@ -1,0 +1,10 @@
+[Unit]
+Description=Pulseaudio
+After=network.target
+
+[Service]
+Type=forking
+ExecStart=/usr/bin/pulseaudio --daemon --system --disallow-exit --disallow-module-loading
+
+[Install]
+WantedBy=multi-user.target
